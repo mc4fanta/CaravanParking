@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CaravanParking</string>
+    <string name="menu_map">Karte</string>
+    <string name="menu_settings">Einstellungen</string>
 </resources>
