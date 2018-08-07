@@ -1,4 +1,4 @@
-package com.example.niklas.caravanparking.Map;
+package com.example.niklas.caravanparking.map;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.niklas.caravanparking.R;
+import com.example.niklas.caravanparking.map.sync.MapConnection;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,6 +20,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MapConnection connection = new MapConnection();
+        connection.execute();
 
         // show toolbar
         setContentView(R.layout.map_activity);
