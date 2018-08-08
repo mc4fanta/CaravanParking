@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.niklas.caravanparking.Map.MapActivity"
+    tools:context="com.example.niklas.caravanparking.map.MapActivity"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
