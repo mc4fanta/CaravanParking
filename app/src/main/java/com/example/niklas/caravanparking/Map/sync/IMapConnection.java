@@ -8,6 +8,8 @@ public interface IMapConnection {
     String SOUTH_WEST_LAT = "sw_lat";
     String SOUTH_WEST_LONG = "sw_long";
 
-    String X_CORD = "x";
-    String Y_CORD = "y";
+    String LATITUDE = "lat";
+    String LONGITUDE = "long";
+
+    String DESCRIPTION = "desc";
 }

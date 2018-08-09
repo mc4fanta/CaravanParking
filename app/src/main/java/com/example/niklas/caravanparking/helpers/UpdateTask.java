@@ -21,7 +21,7 @@ public abstract class UpdateTask extends AsyncTask<String, Void, JSONObject> imp
     public Map<String, String> params = new HashMap<>();
 
     public UpdateTask(String requestCode) {
-        params.put("requestCode", requestCode);
+        params.put(REQUEST_CODE, requestCode);
     }
 
     @Override

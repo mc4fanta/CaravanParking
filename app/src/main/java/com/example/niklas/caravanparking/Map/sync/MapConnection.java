@@ -23,6 +23,8 @@ public class MapConnection extends UpdateTask implements IMapConnection{
         params.put(NORTH_HEAST_LONG, String.valueOf(mapBounds.northeast.longitude));
         params.put(SOUTH_WEST_LAT, String.valueOf(mapBounds.southwest.latitude));
         params.put(SOUTH_WEST_LONG, String.valueOf(mapBounds.southwest.longitude));
+
+        // TODO don't download already downloaded locations again
     }
 
     @Override
@@ -33,11 +35,15 @@ public class MapConnection extends UpdateTask implements IMapConnection{
         for (int i = 0; i < jLocations.length(); i++) {
             JSONObject jLocation = jLocations.getJSONObject(i);
 
-            Double x = jLocation.getDouble(X_CORD);
-            Double y = jLocation.getDouble(Y_CORD);
+            Double x = jLocation.getDouble(LATITUDE);
+            Double y = jLocation.getDouble(LONGITUDE);
+
+            String description = jLocation.getString(DESCRIPTION);
 
             // set marker on map
             mMap.addMarker(new MarkerOptions().position(new LatLng(x, y)));
+
+            // TODO set on click listener for markers
         }
     }
 }
